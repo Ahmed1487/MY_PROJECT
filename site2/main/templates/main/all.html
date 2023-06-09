@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <title>Site</title>
+</head>
+<body>
+  <header><nav><ul>
+    <li><a href="{% url 'home' %}">Главная</a></li>
+    <li><a href="{% url 'feedback' %}">Написать отзыв</a></li>
+    <li><a href="{% url 'about' %}">Слова благодарности</a></li>
+    <li><a href="{% url 'contact' %}">Контакты</a></li>
+  </ul></nav></header>
+  {% block content %}{% endblock %}
+  <footer>
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/8012ecdf64b7c9cfd62e90d7f55f9b5b7b72b755/" style="font-size: 26px; margin-left: 95px; font-family: Arial, Helvetica, sans-serif;">О нас</a>
+  </footer>
+</body>
+
+</html>
